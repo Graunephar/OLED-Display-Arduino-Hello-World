@@ -8,6 +8,8 @@ Based on [This Instructable](https://www.instructables.com/Tutorial-to-Interface
 
 [Documetation for U8g2 methods](https://github.com/olikraus/u8g2/wiki/u8g2reference)  
 
+Tutorials for using XBM to draw bitmaps [here](https://sandhansblog.wordpress.com/2017/04/16/interfacing-displaying-a-custom-graphic-on-an-0-96-i2c-oled/), and [here](https://blog.squix.org/2015/05/esp8266-nodemcu-how-to-create-xbm.html)
+
 Ports to connect
 **Uno     OLED**
 GND     GND
