@@ -6,6 +6,8 @@ Using the [U8g2 library](https://github.com/olikraus/u8g2/wiki/fntlistall). The 
 Based on [This Instructable](https://www.instructables.com/Tutorial-to-Interface-OLED-091inch-128x32-With-Ard/)
 
 
+[Documetation for U8g2 methods](https://github.com/olikraus/u8g2/wiki/u8g2reference)  
+
 Ports to connect
 **Uno     OLED**
 GND     GND
