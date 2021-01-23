@@ -60,10 +60,38 @@ U8G2_SSD1306_128X32_UNIVISION_F_HW_I2C u8g2(U8G2_R0);
 
   void loop(void) {
 
+    /* This loop contains a lot of random based on the documentation, all examples are seperated with a delay */ 
+
+    //Draw Bitmap
     u8g2.clearBuffer();
     u8g2.drawXBM( 0, 0, bitmap_width, bitmap_height, bitmap_bits);
     u8g2.sendBuffer();
+
     delay(3000);
+
+
+    //Just put stuff on top of buffer
+
+    u8g2.clearBuffer();
+
+    u8g2.drawBox(0,0,132, 32); // X, Y, Width, Height
+    u8g2.setDrawColor(0);
+    u8g2.setFont(u8g2_font_unifont_t_symbols);
+    u8g2.drawUTF8(5, 20, "Snowman: ☃");	
+    u8g2.sendBuffer();
+
+    u8g2.setDrawColor(1); // reset draw color
+
+    delay(3000);
+
+    u8g2.clearBuffer();
+    u8g2.setFont(u8g2_font_unifont_t_symbols);
+    u8g2.drawUTF8(5, 20, "Snowman: ☃");	
+    u8g2.sendBuffer();
+
+
+    delay(3000);
+
 
     //Progress bar
     for (int i=0; i <= 128; i++) {
@@ -74,7 +102,7 @@ U8G2_SSD1306_128X32_UNIVISION_F_HW_I2C u8g2(U8G2_R0);
     delay(10);
     }
 
-    delay(3000);
+    delay(1000);
 
     //Example square
     u8g2.clearBuffer();
@@ -84,26 +112,26 @@ U8G2_SSD1306_128X32_UNIVISION_F_HW_I2C u8g2(U8G2_R0);
     delay(3000);
 
     u8g2.clearBuffer();					// clear the internal memory
-    u8g2.setFont(u8g2_font_logisoso28_tr);  // choose a suitable font at https://github.com/olikraus/u8g2/wiki/fntlistall
-    u8g2.drawStr(8,29,"MYBOTIC");	// write something to the internal memory
+    u8g2.setFont(u8g2_font_luBIS14_tf);  // choose a suitable font at https://github.com/olikraus/u8g2/wiki/fntlistall
+    u8g2.drawStr(0,20,"Graunephar");	// write something to the internal memory
     u8g2.sendBuffer();					// transfer internal memory to the display
     delay(3000);
 
     u8g2.clearBuffer();         // clear the internal memory
     u8g2.setFont(u8g2_font_logisoso28_tr);  // choose a suitable font at https://github.com/olikraus/u8g2/wiki/fntlistall
-    u8g2.drawStr(31,24,"your");  // write something to the internal memory
+    u8g2.drawStr(31,24,"Hello");  // write something to the internal memory
     u8g2.sendBuffer();         // transfer internal memory to the display
     delay(800);
 
     u8g2.clearBuffer();         // clear the internal memory
     u8g2.setFont(u8g2_font_logisoso28_tr);  // choose a suitable font at https://github.com/olikraus/u8g2/wiki/fntlistall
-    u8g2.drawStr(10,29,"robotic");  // write something to the internal memory
+    u8g2.drawStr(10,29,"World");  // write something to the internal memory
     u8g2.sendBuffer();         // transfer internal memory to the display
     delay(800);
 
     u8g2.clearBuffer();         // clear the internal memory
     u8g2.setFont(u8g2_font_logisoso28_tr);  // choose a suitable font at https://github.com/olikraus/u8g2/wiki/fntlistall
-    u8g2.drawStr(4,29,"solution");  // write something to the internal memory
+    u8g2.drawStr(4,29,"OLED");  // write something to the internal memory
     u8g2.sendBuffer();         // transfer internal memory to the display
     delay(2000);  
 }
